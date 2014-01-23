@@ -1,0 +1,23 @@
+﻿<Window x:Class="QuidditchWPF.CoupeFenetre"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Gestion des Coupes" Height="350" Width="511" Loaded="Window_Loaded_1">
+    <StackPanel Orientation="Vertical">
+        <Grid Height="320">
+            <StackPanel x:Name="noname" HorizontalAlignment="Left" Height="300" Margin="14,6,0,0" VerticalAlignment="Top" Width="168" >
+                <TextBlock Margin="10" FontSize="20"><Run Text="Liste des Coupes"/></TextBlock>
+                <ListBox x:Name="ListeCoupes" HorizontalAlignment="Left" Height="232" Width="140"/>
+            </StackPanel>
+
+
+            <TextBox x:Name="Libelle" Text="{Binding Libelle}" HorizontalAlignment="Left" Height="26" Margin="311,46,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="170"    />
+            <TextBox x:Name="Annee" Text="{Binding Year}" HorizontalAlignment="Left" Height="21" Margin="311,20,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="170"/>
+            <Label Content="Année" HorizontalAlignment="Left" Margin="187,20,0,0" VerticalAlignment="Top" Height="26" Width="98"/>
+            <Label Content="Libellé" HorizontalAlignment="Left" Margin="187,46,0,0" VerticalAlignment="Top" Height="26" Width="98"/>
+            <Button Content="Modifier" HorizontalAlignment="Left" Margin="328,111,0,0" VerticalAlignment="Top" Width="75"/>
+            <Button Content="Ajouter" HorizontalAlignment="Left" Margin="408,111,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click_1"/>
+            <Button Content="Supprimer" HorizontalAlignment="Left" Margin="248,111,0,0" VerticalAlignment="Top" Width="75"/>
+
+        </Grid>
+    </StackPanel>
+</Window>

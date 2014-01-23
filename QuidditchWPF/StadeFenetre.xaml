@@ -1,0 +1,26 @@
+﻿<Window x:Class="QuidditchWPF.StadeFenetre"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Gestion des Stades" Height="440" Width="562">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="10*"/>
+            <RowDefinition Height="231*"/>
+        </Grid.RowDefinitions>
+        <Label Content="Nom :" HorizontalAlignment="Left" Height="30" Margin="180,0,0,0" VerticalAlignment="Top" Width="104" Grid.Row="1"/>
+        <Label Content="Adresse :" HorizontalAlignment="Left" Height="29" Margin="180,31,0,0" VerticalAlignment="Top" Width="104" Grid.Row="1"/>
+        <Label Content="Places :" HorizontalAlignment="Left" Height="34" Margin="180,60,0,0" VerticalAlignment="Top" Width="104" Grid.Row="1"/>
+        <TextBox Text="{Binding Nom}" HorizontalAlignment="Left" Height="30" Margin="289,0,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="255" Grid.Row="1"/>
+        <TextBox Text="{Binding Adresse}" HorizontalAlignment="Left" Height="30" Margin="289,30,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="255" Grid.Row="1"/>
+        <TextBox Text="{Binding nbPlaces}" HorizontalAlignment="Left" Height="30" Margin="289,60,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="255" Grid.Row="1"/>
+        <Label Content="Pourcentage com :" HorizontalAlignment="Left" Height="34" Margin="180,86,0,0" VerticalAlignment="Top" Width="109" Grid.Row="1"/>
+        <TextBox Text="{Binding PourcentageCommisssion}" HorizontalAlignment="Left" Height="30" Margin="289,90,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="255" Grid.Row="1"/>
+        <ListBox x:Name="ListeStades" HorizontalAlignment="Left" Height="393" Grid.Row="1" VerticalAlignment="Top" Width="175" Loaded="WindowStades_loader">
+            <ScrollBar Height="0" Width="175"/>
+        </ListBox>
+        <Button Content="Supprimer" HorizontalAlignment="Left" Height="37" Margin="289,143,0,0" Grid.Row="1" VerticalAlignment="Top" Width="75"/>
+        <Button Content="Modifier" HorizontalAlignment="Left" Height="37" Margin="379,143,0,0" Grid.Row="1" VerticalAlignment="Top" Width="75"/>
+        <Button Content="Ajouter" HorizontalAlignment="Left" Height="37" Margin="469,143,0,0" Grid.Row="1" VerticalAlignment="Top" Width="75"/>
+
+    </Grid>
+</Window>

@@ -1,0 +1,33 @@
+﻿<Window x:Class="QuidditchWPF.MatchFenetre"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Gestion des Matchs" Height="448" Width="617" Loaded="WindowMatchs_Loaded">
+    <Grid>
+        <Label Content="Date" HorizontalAlignment="Left" Height="30" Margin="250,109,0,0" VerticalAlignment="Top" Width="104"/>
+        <TextBox Text="{Binding Date}" HorizontalAlignment="Left" Height="30" Margin="354,109,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="255"/>
+        <Label  Content="Prix" HorizontalAlignment="Left" Height="30" Margin="250,139,0,0" VerticalAlignment="Top" Width="104"/>
+        <TextBox Text="{Binding ScoreEquipeVisiteur}" HorizontalAlignment="Left" Height="30" Margin="354,268,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="255"/>
+        <Label Content="Score visiteur :" HorizontalAlignment="Left" Height="30" Margin="250,268,0,0" VerticalAlignment="Top" Width="104"/>
+        <TextBox Text="{Binding Prix}" HorizontalAlignment="Left" Height="30" Margin="354,139,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="255"/>
+        <Label Content="Score domicile :" HorizontalAlignment="Left" Height="25" Margin="250,243,0,0" VerticalAlignment="Top" Width="104"/>
+        <TextBox Text="{Binding ScoreEquipeDomicile}" HorizontalAlignment="Left" Height="25" Margin="354,243,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="255"/>
+        <Label Content="Stade :" HorizontalAlignment="Left" Height="23" Margin="250,169,0,0" VerticalAlignment="Top" Width="104"/>
+        <Label Content="Equipe domicile" HorizontalAlignment="Left" Height="25" Margin="250,192,0,0" VerticalAlignment="Top" Width="104"/>
+        <Label Content="Fiche du Match" HorizontalAlignment="Left" Height="31" Margin="364,25,0,0" VerticalAlignment="Top" Width="183"/>
+        <Label Content="Equipe visiteur" HorizontalAlignment="Left" Height="23" Margin="250,215,0,0" VerticalAlignment="Top" Width="104"/>
+        <ComboBox Text="{Binding Stade}" Height="23" Margin="354,169,0,0" VerticalAlignment="Top">
+            <ComboBoxItem Content="Michelin" HorizontalAlignment="Left" Width="253"/>
+        </ComboBox>
+        <ComboBox Text="{Binding EquipeVisiteur}" Height="23" Margin="354,215,0,0" VerticalAlignment="Top"/>
+        <ComboBox Text="{Binding EquipeDomicile}" Height="23" Margin="354,192,0,0" VerticalAlignment="Top"/>
+        <Button Content="Modifier" HorizontalAlignment="Left" Height="27" Margin="408,316,0,0" VerticalAlignment="Top" Width="87"/>
+        <Button Content="Supprimer" HorizontalAlignment="Left" Height="27" Margin="305,316,0,0" VerticalAlignment="Top" Width="87"/>
+        <Button Content="Ajouter" HorizontalAlignment="Left" Height="27" Margin="512,316,0,0" VerticalAlignment="Top" Width="87" Click="Button_Click_1"/>
+       
+        <ListBox x:Name="ListeMatchs" HorizontalAlignment="Left" Height="393" VerticalAlignment="Top" Width="175" Margin="0,25,0,0">
+            <ScrollBar Height="0" Width="175"/>
+        </ListBox>
+        <ComboBox Height="23" Margin="0,25,434,0" VerticalAlignment="Top"/>
+
+    </Grid>
+</Window>
