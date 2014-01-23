@@ -14,7 +14,7 @@ namespace QuidditchConsole
             int quitter = 0;
             var funcs = new List<Func<List<String>>>(); // Liste de Func<IEnumerable<String>> 
             // fonction qui ne prend pas de paramètre et retourne une liste de String
-            CoupeManager tournoi = new CoupeManager();
+            BusinessManager tournoi = new BusinessManager();
 
             funcs.Add(tournoi.AfficheMatchsProgrammés);
             funcs.Add(tournoi.AfficheStadesProgrammés);
